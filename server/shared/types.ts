@@ -30,15 +30,15 @@ export interface ServerSnapshot {
 
 export interface ServerToClientEvents {
   snapshot: (snapshot: ServerSnapshot) => void;
-  users:update: (users: string[]) => void;
-  draw:stroke: (stroke: DrawStroke) => void;
-  canvas:clear: () => void;
-  chat:message: (message: ChatMessage) => void;
+  'users:update': (users: string[]) => void;
+  'draw:stroke': (stroke: DrawStroke) => void;
+  'canvas:clear': () => void;
+  'chat:message': (message: ChatMessage) => void;
 }
 
 export interface ClientToServerEvents {
-  user:join: (userName: string, callback: (snapshot: ServerSnapshot) => void) => void;
-  draw:stroke: (stroke: DrawStroke) => void;
-  canvas:clear: () => void;
-  chat:message: (text: string) => void;
+  'user:join': (userName: string, callback: (snapshot: ServerSnapshot) => void) => void;
+  'draw:stroke': (stroke: DrawStroke) => void;
+  'canvas:clear': () => void;
+  'chat:message': (text: string) => void;
 }
